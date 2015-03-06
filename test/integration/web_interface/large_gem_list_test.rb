@@ -29,7 +29,8 @@ class LargeGemListSpec < Geminabox::TestCase
       unrelated_gem-1.0
     ]
 
-    page.click_link 'Older versions...'
+    page.first(:link, 'All versions...').click
+    #page.click_link 'All versions...'
 
     assert_equal gems_on_page, %w[
       my_gem-6.0

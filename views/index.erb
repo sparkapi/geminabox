@@ -31,9 +31,7 @@
           </form>
         <% end %>
 
-        <% if versions.count > 5 %>
-          <a href="<%= url("/gems/#{name}") %>" id="more_link">Older versions...</a>
-        <% end %>
+        <a href="<%= url("/gems/#{name}") %>" id="more_link">All versions...</a>
 
         <div class="details">
           <p>

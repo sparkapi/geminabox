@@ -2,6 +2,13 @@
 <a href="/">Back to Gem Index</a>
 </p>
 
+<h3 class="dependencies">Runtime Dependencies</h3>
+<ul class="dependencies">
+  <% @deps[:dependencies].each do |dep| %>
+      <li><strong><%= dep.first %></strong> <%= dep.last %>
+    <% end %>
+</ul>
+
 <ul class="gemlist">
   <% @gem.by_name do |name, versions| %>
     <li class="gem-version">

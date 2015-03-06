@@ -107,6 +107,8 @@ module Geminabox
     get '/gems/:gemname' do
       gems = Hash[load_gems.by_name]
       @gem = gems[params[:gemname]]
+      # 'first' since we just want the dependencies for the latest gem
+      @deps = gem_dependencies(params[:gemname]).first
       halt 404 unless @gem
       erb :gem
     end

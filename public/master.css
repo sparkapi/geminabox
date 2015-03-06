@@ -153,3 +153,14 @@ ul.gemlist li:hover a.download {
 .gem-version small.platform {
   padding: 0 0 0 15px;
 }
+
+ul.dependencies {
+  list-style-type: none;
+  font-size: 16px;
+  text-align: left;
+}
+h3.dependencies {
+  font-size: 20px;
+  text-align: left;
+  margin-left: 40px;
+}
